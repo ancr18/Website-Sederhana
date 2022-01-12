@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap</title>
+	<!-- CSS V4.6 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="font/css/all.css">
+	<!-- <link rel="stylesheet" href="font/css/all.css"> -->
+	<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+	<!-- BUNDLE -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- HEADER -->
+		<header class="row">
+			<div id="logo" class="col-6">
+				<img src="ancr.png" width="150px" class="img-fluid">
+			</div>
+			<div class="col-6">
+				<ul class="header-nav nav justify-content-end">
+				    <li class="nav-item">
+				        <a class="nav-link active" href="#">Beranda</a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Tentang</a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Login</a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Hubungi Kami</a>
+				    </li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- KONTEN -->
+		<div id="hero" class="row">
+			<div class="title">
+				<h2>Assalamu'alaikum Bang</h2>
+			</div>
+			<div class="button-custom">
+				<button id="hero-btn" class="btn">Daftar Kuy!</button>
+			</div>
+			<div class="text-wrapper-hero">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+				<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+		</div>
+
+		<!-- KONTAK -->
+		<div class="row justify-content-center" id="service">
+			<div class="col-1"></div>
+			<div class="col-3 text-center service">
+				<div class="icon-wrapper">
+					<i class="fas fa-address-card nama-icon"></i>
+				</div>
+				<div class="title-wrapper"><h3>Ardiyansyah R</h3></div>
+				<div class="text-wrapper">F551 20 001</div>
+			</div>
+			<div class="col-3 text-center service">
+				<div class="icon-wrapper">
+					<i class="fas fa-calendar-alt mk-icon"></i>
+				</div>
+				<div class="title-wrapper"><h3>Mata Kuliah</h3></div>
+				<div class="text-wrapper">Pemograman Web I</div>
+			</div>
+			<div class="col-3 text-center service">
+				<div class="icon-wrapper">
+					<i class="fas fa-graduation-cap untad-icon"></i>
+				</div>
+				<div class="title-wrapper"><h3>Universitas Tadulako</h3></div>
+				<div class="text-wrapper">S1 Teknik Informatika</div>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<!-- KONTAK -->
+		<div class="row" id="contact">
+			<div class="col-1"></div>
+			<div class="col-5">
+				<div id="map"></div>
+			</div>
+			<div class="col-5" id="form-wrapper">
+				<form id="form" action="#" method="post">
+					<div class="form-group">
+						<label for="nama">Nama : </label>
+						<input type="text" class="form-control" id="nama">
+					</div>
+
+					<div class="form-group">
+						<label for="email">e-Mail : </label>
+						<input type="text" class="form-control" id="email">
+					</div>
+
+					<div class="form-group">
+						<label for="komen">Komentar : </label>
+						<textarea class="form-control" id="komen"></textarea>
+					</div>
+					<button class="btn btn-success">SUBMIT</button>
+				</form>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<!-- FOOTER -->
+		<footer class="row" id="footer">
+			<div class="col-12">
+				<p class="text-center">Copyright &copy; by AncR</p>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal-wrapper">
+		<div class="modal fade" id="modal-nama" tabindex="-1" role="dialog">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h5 class="modal-title">Identitas</h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <div class="modal-body">
+		                <p>Nama    : Ardiyansyah R</p>
+		                <p>Stambuk : F551 20 001</p>
+		                <p>Fakultas : Teknik</p>
+		                <p>Jurusan : Teknologi Informasi</p>
+		                <p>Prodi : S1 Teknik Informatika</p>
+		                <p>No. HP  : 085218591585</p>
+		                <p>e-mail  : arsk9797@gmail.com</p>
+		                <img src="ijazah.jpg" alt="AncR" height="150px;">
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-primary">Save changes</button>
+		                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="modal fade" id="modal-mk" tabindex="-1" role="dialog">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h5 class="modal-title">Mata Kuliah</h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <div class="modal-body text-justify">
+		                <p>Pemograman Web I</p>
+		                <p>Web Programming atau Pemrograman Web merupakan istilah yang erat kaitannya dengan internet dan website. Memang benar, karena pemrograman web merupakan suatu proses pembuatan website untuk keperluan internet. Orang banyak mengenal web dengan istilah WWW atau World Wide Web.</p>
+		                <p>World Wide Web adalah halaman-halaman website yang terkoneksi satu dengan lainnya atau disebut juga dengan hyperlink yang membentuk samudera informasi yang berjalan dengan protokol HyperText Transfer Protocol (HTTP).</p>
+		             
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-primary">Save changes</button>
+		                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="modal fade" id="modal-untad" tabindex="-1" role="dialog">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h5 class="modal-title">Perguruan Tinggin</h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <div class="modal-body text-justify">
+		                <p>Universitas Tadulko</p>
+		                <p>Universitas Tadulako adalah Universitas Negeri yang berada di Palu, Sulawesi Tengah. Awalnya, pada tahun 1961, Universitas Tadulako merupakan universitas swasta. Namun pada tahun 1981 Universitas ini berganti status menjadi universitas negeri. Berdasarkan data Kemristekdikti pada tahun 2017, Universitas Tadulako berada di peringkat 38 dari 100 perguruan tinggi di Indonesia</p>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-primary">Save changes</button>
+		                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+<script>
+    var map = L.map('map').setView([-0.899, 119.874], 13);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1Ijoia3VyYW1vY2hlZXoiLCJhIjoiY2t4azZzaHhsMzE0ejJwcTl0anJoNTRvMSJ9.KEYjJ8h8G_YAyPMpS57Fqg'
+        }).addTo(map);
+
+    var marker = L.marker([-0.92559, 119.84548]).addTo(map);
+</script>
+
+<script>
+	$(document).ready(function(){
+		$(".nama-icon").on("click", function(){
+			$("#modal-nama").modal("show");
+		});
+
+		$(".mk-icon").on("click", function(){
+			$("#modal-mk").modal("show");
+		});
+
+		$(".untad-icon").on("click", function(){
+			$("#modal-untad").modal("show");
+		});
+	});
+	
+</script>
